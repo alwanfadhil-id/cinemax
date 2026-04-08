@@ -1,151 +1,229 @@
-# 🎬 CineMax - Movie Booking Application
+# 🎬 CineMax - Movie Seat Booking System
 
-A modern, responsive movie booking application built with Next.js 16 and React 19. Select your seats, checkout, and pay—all in one seamless experience.
+**Interactive movie booking interface** — Demo aplikasi pemilihan kursi bioskop secara real-time dengan desain modern dan user-friendly.
 
-## ✨ Features
+> 🎯 **Project ini adalah frontend demo** yang menampilkan user flow lengkap dari pemilihan kursi hingga konfirmasi pembayaran. Siap dikembangkan menjadi aplikasi booking penuh sesuai kebutuhan bisnis Anda.
 
-- 🎟️ **Interactive Seat Selection** - Visual seat map with real-time availability
-- 💳 **Payment Modal** - Multiple payment method support
-- 📱 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
-- 🌙 **Dark/Light Mode** - Theme switching with next-themes
-- ✨ **Smooth Animations** - Scroll reveal effects and floating particles
-- 🔔 **Toast Notifications** - Real-time feedback for user actions
-- 🎯 **Booking Summary** - Real-time price calculation with service fees
-- 🎨 **Modern UI** - Built with Tailwind CSS and shadcn/ui components
+---
 
-## 🚀 Tech Stack
+## 🖥️ Live Demo
 
-- **Framework**: Next.js 16.2.0
-- **UI Library**: React 19
-- **Language**: TypeScript 5.7.3
-- **Styling**: Tailwind CSS 4.2.0
-- **UI Components**: shadcn/ui (Radix UI primitives)
-- **Form Management**: React Hook Form + Zod validation
-- **Icons**: Lucide React
-- **Notifications**: Sonner
-- **Analytics**: Vercel Analytics
+**Lihat langsung:** [Deploy your demo link here]
 
-## 📦 Getting Started
+**Repository:** [github.com/alwanfadhil-id/cinemax](https://github.com/alwanfadhil-id/cinemax)
+
+---
+
+## ✨ Fitur yang Sudah Tersedia
+
+### 🎟️ Core Booking Flow
+| Fitur | Status | Deskripsi |
+|-------|--------|-----------|
+| **Interactive Seat Map** | ✅ Ready | Visual grid kursi dengan 4 status: Available, Selected, Occupied, VIP |
+| **Multi-Seat Selection** | ✅ Ready | Pilih hingga 10 kursi sekaligus dalam 1 transaksi |
+| **Real-time Price Calculation** | ✅ Ready | Harga otomatis terhitung setiap kursi dipilih/dihapus |
+| **Service Fee** | ✅ Ready | Biaya layanan per kursi ditampilkan transparan |
+| **Booking Summary Sidebar** | ✅ Ready | Ringkasan pesanan real-time di sidebar |
+| **Payment Method Selection** | ✅ Ready | 3 metode: Cash, Bank Transfer, QRIS |
+| **Checkout Success Modal** | ✅ Ready | Konfirmasi booking dengan detail lengkap |
+| **Toast Notifications** | ✅ Ready | Feedback visual untuk setiap aksi user |
+
+### 🎨 UI/UX
+- 🌙 **Dark Mode Default** — Tema gelap elegan dengan aksen amber/gold
+- 📱 **Fully Responsive** — Optimal di mobile, tablet, dan desktop
+- ✨ **Smooth Animations** — Scroll reveal effects & particle background
+- 🎬 **Loading Screen** — Transisi halus saat aplikasi dimuat
+- 🧭 **Sticky Navigation** — Navbar & sidebar tetap terlihat saat scroll
+
+---
+
+## 🛠️ Tech Stack
+
+```
+Frontend:    Next.js 16 + React 19 + TypeScript
+Styling:     Tailwind CSS 4 + shadcn/ui Components
+Animations:  Custom CSS + Scroll Reveal
+Icons:       Lucide React
+Notifications: Sonner
+Deployment:  Vercel (optimized)
+```
+
+---
+
+## 📱 User Flow
+
+```
+1. User membuka halaman
+   ↓
+2. Loading screen menampilkan animasi intro
+   ↓
+3. User melihat seat map dengan layout bioskop
+   ↓
+4. User klik kursi yang tersedia (max 10 kursi)
+   ↓
+5. Sidebar menampilkan ringkasan booking + total harga
+   ↓
+6. User klik "Proceed to Checkout"
+   ↓
+7. Modal konfirmasi pembayaran muncul
+   ↓
+8. User pilih metode pembayaran (Cash/Transfer/QRIS)
+   ↓
+9. Checkout success modal menampilkan detail booking
+   ↓
+10. Kursi yang sudah dibooking berubah status menjadi "Occupied"
+```
+
+---
+
+## 🚀 Menjalankan Project
 
 ### Prerequisites
-
-- Node.js 18+ 
-- npm or pnpm
+- Node.js 18 atau lebih baru
+- npm atau pnpm
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/alwanfadhil-id/cinemax.git
-   cd cinemax
-   ```
+```bash
+# Clone repository
+git clone https://github.com/alwanfadhil-id/cinemax.git
+cd cinemax
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   pnpm install
-   ```
+# Install dependencies
+npm install
 
-3. **Run the development server**
-   ```bash
-   npm run dev
-   # or
-   pnpm dev
-   ```
+# Jalankan development server
+npm run dev
+```
 
-4. **Open your browser**
-   
-   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
+Buka **[http://localhost:3000](http://localhost:3000)** di browser.
 
-## 🛠️ Available Scripts
+### Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm run lint` | Run ESLint |
+```bash
+npm run dev      # Development server
+npm run build    # Production build
+npm run start    # Production server
+npm run lint     # Code linting
+```
 
-## 📁 Project Structure
+---
+
+## 📂 Project Structure
 
 ```
 cinemax/
-├── app/                    # Next.js App Router
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Main booking page
-│   └── globals.css        # Global styles
-├── components/            # React components
-│   ├── ui/               # shadcn/ui primitives
-│   ├── seat-map.tsx      # Interactive seat selection
-│   ├── booking-summary.tsx # Booking overview
-│   ├── payment-modal.tsx # Payment confirmation
-│   ├── checkout-modal.tsx # Success modal
-│   └── ...               # Other UI components
-├── lib/                   # Utilities
-│   ├── seat-utils.ts     # Seat generation logic
-│   └── utils.ts          # Helper functions
-├── hooks/                 # Custom React hooks
-├── public/               # Static assets
-└── styles/               # Additional styles
+├── app/
+│   ├── layout.tsx          # Root layout + providers
+│   ├── page.tsx            # Main booking page (state management)
+│   └── globals.css         # Global styles + custom animations
+│
+├── components/
+│   ├── seat-map.tsx        # Interactive seat grid component
+│   ├── booking-summary.tsx # Sidebar ringkasan booking
+│   ├── payment-modal.tsx   # Modal pemilihan pembayaran
+│   ├── checkout-modal.tsx  # Success confirmation modal
+│   ├── movie-info.tsx      # Informasi film (sidebar)
+│   ├── navbar.tsx          # Top navigation bar
+│   ├── footer.tsx          # Footer component
+│   ├── toast.tsx           # Notification component
+│   ├── loading-screen.tsx  # Intro loading animation
+│   ├── floating-particles.tsx # Background particles
+│   ├── scroll-reveal.tsx   # Scroll animation wrapper
+│   └── ui/                 # shadcn/ui component library
+│
+├── lib/
+│   ├── seat-utils.ts       # Seat generation logic
+│   └── utils.ts            # Helper functions
+│
+├── hooks/                  # Custom React hooks
+├── public/                 # Static assets (posters, icons)
+└── styles/                 # Additional CSS
 ```
 
-## 🎯 Key Features
+---
 
-### Seat Selection
-- Visual seat map with different seat statuses (available, selected, occupied)
-- Maximum 10 seats per booking
-- Real-time seat status updates
-- Click to select/deselect seats
+## 🎯 Fitur yang Bisa Ditambahkan (Custom Development)
 
-### Booking Flow
-1. Select your seats from the interactive seat map
-2. Review booking details in the sidebar summary
-3. Proceed to checkout
-4. Choose payment method
-5. Confirm and receive booking confirmation
+Fitur berikut **belum ada di demo ini** tapi bisa dikembangkan sesuai kebutuhan:
 
-### UI/UX
-- Sticky sidebar with movie info and booking summary
-- Smooth scroll reveal animations
-- Floating particle background effects
-- Loading screen for better UX
-- Toast notifications for user feedback
+### 📊 Backend & Database
+- [ ] User authentication & registration
+- [ ] Movie schedule management (admin panel)
+- [ ] Real-time seat availability (WebSocket)
+- [ ] Booking history per user
+- [ ] Payment gateway integration (Midtrans, Xendit)
+- [ ] Email/WhatsApp booking confirmation
 
-## 🌐 Deployment
+### 🎬 Movie Management
+- [ ] Multiple movie listings
+- [ ] Showtime scheduling
+- [ ] Multiple studio/theater selection
+- [ ] Dynamic pricing (weekday vs weekend)
+- [ ] Movie ratings & reviews
 
-### Deploy to Vercel
+### 💳 Payment & Checkout
+- [ ] Payment gateway integration
+- [ ] Auto-expire booking (timer countdown)
+- [ ] Refund & cancellation system
+- [ ] Promo codes & discounts
+- [ ] Membership/loyalty points
 
-The easiest way to deploy this Next.js app is using the [Vercel Platform](https://vercel.com/new):
+### 📱 Additional Features
+- [ ] PWA (Progressive Web App) support
+- [ ] Push notifications
+- [ ] Social media sharing
+- [ ] QR code ticket generation
+- [ ] Admin dashboard untuk manajemen
 
-1. Push your code to GitHub
-2. Import your repository on Vercel
-3. Vercel will auto-detect Next.js configuration
-4. Click Deploy
+---
 
-### Environment Variables
+## 🌐 Deploy ke Vercel
 
-If needed, create a `.env.local` file:
+Cara termudah untuk mendemokan aplikasi ini:
 
-```env
-# Add your environment variables here
+1. Push code ke GitHub (✅ **Sudah dilakukan**)
+2. Buka [vercel.com/new](https://vercel.com/new)
+3. Import repository `cinemax`
+4. Klik **Deploy**
+5. Dapatkan live URL untuk dishare ke client
+
+---
+
+## 📸 Screenshots
+
+*Tambahkan screenshot aplikasi Anda di sini untuk showcase:*
+
+```
+[Desktop View]    | Screenshot 1
+[Mobile View]     | Screenshot 2
+[Seat Selection]  | Screenshot 3
+[Payment Flow]    | Screenshot 4
 ```
 
-Then add them to your Vercel project settings.
+---
+
+## 👤 Developer
+
+**Alwan Fadhil**  
+🔗 GitHub: [@alwanfadhil-id](https://github.com/alwanfadhil-id)  
+📧 Contact: [Your email here]  
+💼 Portfolio: [Your portfolio link here]
+
+*Tertarik untuk mengembangkan project ini? Hubungi saya untuk diskusi kebutuhan aplikasi Anda.*
+
+---
 
 ## 📝 License
 
-Private project - All rights reserved
+Private project — All rights reserved
 
-## 👤 Author
-
-**Alwan Fadhil**
-- GitHub: [@alwanfadhil-id](https://github.com/alwanfadhil-id)
+---
 
 ## 🙏 Acknowledgments
 
-- [Next.js](https://nextjs.org/)
-- [Vercel](https://vercel.com/)
-- [shadcn/ui](https://ui.shadcn.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Lucide Icons](https://lucide.dev/)
+- [Next.js](https://nextjs.org/) — React framework
+- [Vercel](https://vercel.com/) — Hosting & deployment
+- [shadcn/ui](https://ui.shadcn.com/) — UI component primitives
+- [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS framework
+- [Lucide Icons](https://lucide.dev/) — Beautiful icons
