@@ -17,18 +17,20 @@
 ## ✨ Fitur yang Sudah Tersedia
 
 ### 🎟️ Core Booking Flow
-| Fitur | Status | Deskripsi |
-|-------|--------|-----------|
-| **Interactive Seat Map** | ✅ Ready | Visual grid kursi dengan 4 status: Available, Selected, Occupied, VIP |
-| **Multi-Seat Selection** | ✅ Ready | Pilih hingga 10 kursi sekaligus dalam 1 transaksi |
-| **Real-time Price Calculation** | ✅ Ready | Harga otomatis terhitung setiap kursi dipilih/dihapus |
-| **Service Fee** | ✅ Ready | Biaya layanan per kursi ditampilkan transparan |
-| **Booking Summary Sidebar** | ✅ Ready | Ringkasan pesanan real-time di sidebar |
-| **Payment Method Selection** | ✅ Ready | 3 metode: Cash, Bank Transfer, QRIS |
-| **Checkout Success Modal** | ✅ Ready | Konfirmasi booking dengan detail lengkap |
-| **Toast Notifications** | ✅ Ready | Feedback visual untuk setiap aksi user |
+
+| Fitur                           | Status   | Deskripsi                                                             |
+| ------------------------------- | -------- | --------------------------------------------------------------------- |
+| **Interactive Seat Map**        | ✅ Ready | Visual grid kursi dengan 4 status: Available, Selected, Occupied, VIP |
+| **Multi-Seat Selection**        | ✅ Ready | Pilih hingga 10 kursi sekaligus dalam 1 transaksi                     |
+| **Real-time Price Calculation** | ✅ Ready | Harga otomatis terhitung setiap kursi dipilih/dihapus                 |
+| **Service Fee**                 | ✅ Ready | Biaya layanan per kursi ditampilkan transparan                        |
+| **Booking Summary Sidebar**     | ✅ Ready | Ringkasan pesanan real-time di sidebar                                |
+| **Payment Method Selection**    | ✅ Ready | 3 metode: Cash, Bank Transfer, QRIS                                   |
+| **Checkout Success Modal**      | ✅ Ready | Konfirmasi booking dengan detail lengkap                              |
+| **Toast Notifications**         | ✅ Ready | Feedback visual untuk setiap aksi user                                |
 
 ### 🎨 UI/UX
+
 - 🌙 **Dark Mode Default** — Tema gelap elegan dengan aksen amber/gold
 - 📱 **Fully Responsive** — Optimal di mobile, tablet, dan desktop
 - ✨ **Smooth Animations** — Scroll reveal effects & particle background
@@ -79,6 +81,7 @@ Deployment:  Vercel (optimized)
 ## 🚀 Menjalankan Project
 
 ### Prerequisites
+
 - Node.js 18 atau lebih baru
 - npm atau pnpm
 
@@ -148,6 +151,7 @@ cinemax/
 Fitur berikut **belum ada di demo ini** tapi bisa dikembangkan sesuai kebutuhan:
 
 ### 📊 Backend & Database
+
 - [ ] User authentication & registration
 - [ ] Movie schedule management (admin panel)
 - [ ] Real-time seat availability (WebSocket)
@@ -156,6 +160,7 @@ Fitur berikut **belum ada di demo ini** tapi bisa dikembangkan sesuai kebutuhan:
 - [ ] Email/WhatsApp booking confirmation
 
 ### 🎬 Movie Management
+
 - [ ] Multiple movie listings
 - [ ] Showtime scheduling
 - [ ] Multiple studio/theater selection
@@ -163,6 +168,7 @@ Fitur berikut **belum ada di demo ini** tapi bisa dikembangkan sesuai kebutuhan:
 - [ ] Movie ratings & reviews
 
 ### 💳 Payment & Checkout
+
 - [ ] Payment gateway integration
 - [ ] Auto-expire booking (timer countdown)
 - [ ] Refund & cancellation system
@@ -170,6 +176,7 @@ Fitur berikut **belum ada di demo ini** tapi bisa dikembangkan sesuai kebutuhan:
 - [ ] Membership/loyalty points
 
 ### 📱 Additional Features
+
 - [ ] PWA (Progressive Web App) support
 - [ ] Push notifications
 - [ ] Social media sharing
@@ -178,39 +185,14 @@ Fitur berikut **belum ada di demo ini** tapi bisa dikembangkan sesuai kebutuhan:
 
 ---
 
-## 🌐 Deploy ke Vercel
-
-Cara termudah untuk mendemokan aplikasi ini:
-
-1. Push code ke GitHub (✅ **Sudah dilakukan**)
-2. Buka [vercel.com/new](https://vercel.com/new)
-3. Import repository `cinemax`
-4. Klik **Deploy**
-5. Dapatkan live URL untuk dishare ke client
-
----
-
-## 📸 Screenshots
-
-*Tambahkan screenshot aplikasi Anda di sini untuk showcase:*
-
-```
-[Desktop View]    | Screenshot 1
-[Mobile View]     | Screenshot 2
-[Seat Selection]  | Screenshot 3
-[Payment Flow]    | Screenshot 4
-```
-
----
-
 ## 👤 Developer
 
 **Alwan Fadhil**  
 🔗 GitHub: [@alwanfadhil-id](https://github.com/alwanfadhil-id)  
-📧 Contact: [Your email here]  
-💼 Portfolio: [Your portfolio link here]
+📧 Contact: [alwanfadhil.id@gmail.com]  
+💼 Portfolio: [https://v0-myportofo.vercel.app]
 
-*Tertarik untuk mengembangkan project ini? Hubungi saya untuk diskusi kebutuhan aplikasi Anda.*
+_Tertarik untuk mengembangkan project ini? Hubungi saya untuk diskusi kebutuhan aplikasi Anda._
 
 ---
 
