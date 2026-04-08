@@ -16,7 +16,7 @@ export function MovieInfo() {
       {/* Movie Poster with Real Image */}
       <div className="relative bg-neutral-800 overflow-hidden">
         {/* Poster Image with hover lift and scale */}
-        <div className={`relative w-full h-72 flex items-center justify-center bg-neutral-800 transition-all duration-500 ${
+        <div className={`relative w-full h-56 sm:h-64 md:h-72 flex items-center justify-center bg-neutral-800 transition-all duration-500 ${
           isHovered ? '-translate-y-1 scale-[1.02]' : 'translate-y-0 scale-100'
         }`}>
           <img 
@@ -43,10 +43,10 @@ export function MovieInfo() {
         </div>
 
         {/* Content Overlay - positioned at very bottom */}
-        <div className="absolute bottom-2 left-0 right-0 px-5 pb-5 z-10">
+        <div className="absolute bottom-2 left-0 right-0 px-4 md:px-5 pb-4 md:pb-5 z-10">
           <div className={`transition-all duration-500 ${isHovered ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-90'}`}>
-            <p className="text-xs text-amber-400 font-semibold uppercase tracking-wide mb-1">Now Showing</p>
-            <p className="text-lg font-bold text-white drop-shadow-lg">Interstellar</p>
+            <p className="text-[10px] md:text-xs text-amber-400 font-semibold uppercase tracking-wide mb-1">Now Showing</p>
+            <p className="text-base md:text-lg font-bold text-white drop-shadow-lg">Interstellar</p>
           </div>
         </div>
 
@@ -60,18 +60,18 @@ export function MovieInfo() {
       </div>
 
       {/* Movie Details */}
-      <div className="p-5 space-y-4">
+      <div className="p-4 md:p-5 space-y-3 md:space-y-4">
         {/* Title */}
         <div>
-          <h2 className="text-2xl font-bold text-neutral-50 leading-tight mb-1 group-hover:text-amber-400 transition-colors duration-300">
+          <h2 className="text-lg md:text-2xl font-bold text-neutral-50 leading-tight mb-1 group-hover:text-amber-400 transition-colors duration-300">
             Interstellar: Remastered
           </h2>
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs text-neutral-400">Sci-Fi</span>
+            <span className="text-[10px] md:text-xs text-neutral-400">Sci-Fi</span>
             <span className="text-neutral-600">•</span>
-            <span className="text-xs text-neutral-400">Adventure</span>
+            <span className="text-[10px] md:text-xs text-neutral-400">Adventure</span>
             <span className="text-neutral-600">•</span>
-            <span className="text-xs text-neutral-400">Drama</span>
+            <span className="text-[10px] md:text-xs text-neutral-400">Drama</span>
           </div>
         </div>
 
@@ -103,34 +103,34 @@ export function MovieInfo() {
         </div>
 
         {/* Show Info */}
-        <div className="pt-3 border-t border-neutral-700/50 space-y-3">
-          <div className="flex items-start gap-3 group/item">
-            <div className="w-8 h-8 bg-amber-500/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover/item:bg-amber-500/20 transition-colors">
-              <Calendar className="w-4 h-4 text-amber-500" />
+        <div className="pt-3 md:pt-4 border-t border-neutral-700/50 space-y-3">
+          <div className="flex items-start gap-2 md:gap-3 group/item">
+            <div className="w-7 h-7 md:w-8 md:h-8 bg-amber-500/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover/item:bg-amber-500/20 transition-colors">
+              <Calendar className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-500" />
             </div>
             <div className="flex-1">
-              <p className="text-xs text-neutral-500">Date</p>
-              <p className="font-semibold text-neutral-200 text-sm">Saturday, 12 April 2026</p>
+              <p className="text-[10px] md:text-xs text-neutral-500">Date</p>
+              <p className="font-semibold text-neutral-200 text-xs md:text-sm">Saturday, 12 April 2026</p>
             </div>
           </div>
 
-          <div className="flex items-start gap-3 group/item">
-            <div className="w-8 h-8 bg-amber-500/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover/item:bg-amber-500/20 transition-colors">
-              <Clock className="w-4 h-4 text-amber-500" />
+          <div className="flex items-start gap-2 md:gap-3 group/item">
+            <div className="w-7 h-7 md:w-8 md:h-8 bg-amber-500/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover/item:bg-amber-500/20 transition-colors">
+              <Clock className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-500" />
             </div>
             <div className="flex-1">
-              <p className="text-xs text-neutral-500">Showtime</p>
-              <p className="font-semibold text-neutral-200 text-sm">19:30 WIB</p>
+              <p className="text-[10px] md:text-xs text-neutral-500">Showtime</p>
+              <p className="font-semibold text-neutral-200 text-xs md:text-sm">19:30 WIB</p>
             </div>
           </div>
 
-          <div className="flex items-start gap-3 group/item">
-            <div className="w-8 h-8 bg-amber-500/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover/item:bg-amber-500/20 transition-colors">
-              <MapPin className="w-4 h-4 text-amber-500" />
+          <div className="flex items-start gap-2 md:gap-3 group/item">
+            <div className="w-7 h-7 md:w-8 md:h-8 bg-amber-500/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover/item:bg-amber-500/20 transition-colors">
+              <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-500" />
             </div>
             <div className="flex-1">
-              <p className="text-xs text-neutral-500">Theater</p>
-              <p className="font-semibold text-neutral-200 text-sm">Studio 1 — CineMax Grand</p>
+              <p className="text-[10px] md:text-xs text-neutral-500">Theater</p>
+              <p className="font-semibold text-neutral-200 text-xs md:text-sm">Studio 1 — CineMax Grand</p>
             </div>
           </div>
         </div>

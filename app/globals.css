@@ -393,4 +393,69 @@
   .animate-toast-slide-in {
     animation: toast-slide-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
+
+  /* Mobile-specific animations */
+  @keyframes mobile-fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-mobile-fade-in {
+    animation: mobile-fade-in 0.3s ease-out;
+  }
+
+  @keyframes scale-in-mobile {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-scale-in-mobile {
+    animation: scale-in-mobile 0.25s ease-out;
+  }
+
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.35s ease-out;
+  }
+}
+
+/* Custom scrollbar styling - Webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(38, 38, 38, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(64 64 64);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(82 82 82);
 }

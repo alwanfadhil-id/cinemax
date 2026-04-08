@@ -45,25 +45,25 @@ export function BookingSummary({ selectedSeats, onRemoveSeat, onCheckout }: Book
     <Card className="bg-neutral-900 border-neutral-800 rounded-xl shadow-xl overflow-hidden group">
       {/* Gradient top border */}
       <div className="h-1 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500" />
-      
-      <div className="p-6 flex flex-col gap-5">
+
+      <div className="p-4 md:p-6 flex flex-col gap-4 md:gap-5">
         {/* Header */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <ShoppingCart className="w-5 h-5 text-amber-400" />
-            <h2 className="text-xl font-bold text-amber-400">Booking Summary</h2>
+            <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 text-amber-400" />
+            <h2 className="text-base md:text-xl font-bold text-amber-400">Booking Summary</h2>
           </div>
           {selectedSeats.length > 0 && (
-            <div className="bg-amber-500/20 border border-amber-500/30 rounded-full px-3 py-1">
+            <div className="bg-amber-500/20 border border-amber-500/30 rounded-full px-2 md:px-3 py-1">
               <span className="text-xs font-bold text-amber-300">{selectedSeats.length} seats</span>
             </div>
           )}
         </div>
 
         {selectedSeats.length === 0 ? (
-          <div className="text-center py-12 flex flex-col items-center justify-center">
-            <div className="w-20 h-20 bg-neutral-800/50 rounded-full flex items-center justify-center mb-4">
-              <X className="w-10 h-10 text-neutral-600" />
+          <div className="text-center py-8 md:py-12 flex flex-col items-center justify-center">
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-neutral-800/50 rounded-full flex items-center justify-center mb-4">
+              <X className="w-8 h-8 md:w-10 md:h-10 text-neutral-600" />
             </div>
             <p className="text-neutral-400 text-sm mb-2">No seats selected yet</p>
             <p className="text-neutral-500 text-xs">Click on available seats to select</p>
@@ -71,13 +71,13 @@ export function BookingSummary({ selectedSeats, onRemoveSeat, onCheckout }: Book
         ) : (
           <>
             {/* Selected Seats List */}
-            <div className="bg-neutral-800/40 rounded-lg p-4 border border-neutral-700/40">
+            <div className="bg-neutral-800/40 rounded-lg p-3 md:p-4 border border-neutral-700/40">
               <p className="text-xs font-bold text-neutral-300 mb-3 uppercase tracking-wide">Selected Seats</p>
               <div className="flex flex-wrap gap-2">
                 {selectedSeats.map((seat, index) => (
                   <div
                     key={seat.id}
-                    className="flex items-center gap-1 bg-gradient-to-r from-amber-500/25 to-yellow-500/25 border border-amber-500/60 rounded-lg px-3 py-2 text-xs font-semibold animate-seat-pop hover:from-amber-500/35 hover:to-yellow-500/35 transition-all duration-200 hover:scale-105"
+                    className="flex items-center gap-1 bg-gradient-to-r from-amber-500/25 to-yellow-500/25 border border-amber-500/60 rounded-lg px-2 md:px-3 py-1.5 md:py-2 text-xs font-semibold animate-seat-pop hover:from-amber-500/35 hover:to-yellow-500/35 transition-all duration-200 hover:scale-105"
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
                     <span className="text-amber-200">
@@ -88,7 +88,7 @@ export function BookingSummary({ selectedSeats, onRemoveSeat, onCheckout }: Book
                       className="hover:text-amber-100 transition-colors hover:scale-110"
                       aria-label={`Remove seat ${seat.row}${seat.number}`}
                     >
-                      <X size={14} className="text-amber-200" />
+                      <X size={12} className="md:w-4 md:h-4 text-amber-200" />
                     </button>
                   </div>
                 ))}
@@ -96,7 +96,7 @@ export function BookingSummary({ selectedSeats, onRemoveSeat, onCheckout }: Book
             </div>
 
             {/* Price Breakdown */}
-            <div className="bg-neutral-800/20 rounded-lg p-4 space-y-3">
+            <div className="bg-neutral-800/20 rounded-lg p-3 md:p-4 space-y-3">
               <p className="text-xs font-bold text-neutral-300 uppercase tracking-wide">Price Breakdown</p>
               {sortedBreakdown.map((item, index) => (
                 <div 
@@ -131,12 +131,12 @@ export function BookingSummary({ selectedSeats, onRemoveSeat, onCheckout }: Book
               <div className="relative mt-4">
                 {/* Animated background */}
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-yellow-500/10 rounded-lg animate-pulse-slow" />
-                <div className="relative flex justify-between items-center bg-gradient-to-r from-amber-500/15 to-yellow-500/15 rounded-lg p-4 border border-amber-500/30">
+                <div className="relative flex justify-between items-center bg-gradient-to-r from-amber-500/15 to-yellow-500/15 rounded-lg p-3 md:p-4 border border-amber-500/30">
                   <div className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-amber-400 animate-sparkle" />
-                    <span className="text-amber-300 font-bold">Total</span>
+                    <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-amber-400 animate-sparkle" />
+                    <span className="text-amber-300 font-bold text-xs md:text-sm">Total</span>
                   </div>
-                  <span className="text-2xl font-bold text-amber-200">Rp {total.toLocaleString()}</span>
+                  <span className="text-lg md:text-2xl font-bold text-amber-200">Rp {total.toLocaleString()}</span>
                 </div>
               </div>
             </div>
@@ -145,7 +145,7 @@ export function BookingSummary({ selectedSeats, onRemoveSeat, onCheckout }: Book
             <Button
               onClick={onCheckout}
               disabled={selectedSeats.length === 0}
-              className="relative w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-neutral-900 font-bold py-4 text-sm rounded-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl hover:shadow-amber-500/25 overflow-hidden group/btn"
+              className="relative w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-neutral-900 font-bold py-3 md:py-4 text-xs md:text-sm rounded-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl hover:shadow-amber-500/25 overflow-hidden group/btn"
             >
               {/* Shimmer effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />

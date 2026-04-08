@@ -24,21 +24,21 @@ export function Navbar() {
           : 'bg-gradient-to-b from-neutral-950/90 to-transparent'
       }`}
     >
-      <div className="max-w-screen-2xl mx-auto px-4 lg:px-6">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className="max-w-screen-2xl mx-auto px-3 sm:px-4 lg:px-6">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center gap-3 group cursor-pointer">
+          <div className="flex items-center gap-2 sm:gap-3 group cursor-pointer">
             <div className="relative">
               <div className="absolute inset-0 bg-amber-500 rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
-              <div className="relative bg-gradient-to-br from-amber-500 to-yellow-600 p-2 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                <Film className="w-6 h-6 text-neutral-900" strokeWidth={2.5} />
+              <div className="relative bg-gradient-to-br from-amber-500 to-yellow-600 p-1.5 sm:p-2 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                <Film className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-900" strokeWidth={2.5} />
               </div>
             </div>
             <div>
-              <h1 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
+              <h1 className="text-base sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
                 CineMax
               </h1>
-              <p className="text-[10px] lg:text-xs text-neutral-400 -mt-1 tracking-widest uppercase">
+              <p className="text-[8px] sm:text-[10px] lg:text-xs text-neutral-400 -mt-0.5 sm:-mt-1 tracking-widest uppercase">
                 Grand Cinema
               </p>
             </div>
@@ -90,9 +90,9 @@ export function Navbar() {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-neutral-300 hover:text-amber-400 transition-colors"
+            className="p-1.5 sm:p-2 text-neutral-300 hover:text-amber-400 transition-colors"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
           </button>
         </div>
       </div>
